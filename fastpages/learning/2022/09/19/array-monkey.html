@@ -382,6 +382,10 @@ No more monkeys jumping on the bed
         <span class="p">};</span>
     <span class="p">}</span>
 
+    <span class="cm">/**</span>
+<span class="cm">     * Loop and print monkeys in array</span>
+<span class="cm">     * ... repeat until you reach zero  ...</span>
+<span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">//begin the poem</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
@@ -394,17 +398,17 @@ No more monkeys jumping on the bed
 
             <span class="c1">//this print statement shows current count of ants</span>
             <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
-            
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The ants go marching "</span><span class="o">+</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s">" by "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">", hurrah hurrah"</span><span class="p">);</span>
 
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">ants</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
+            
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">antCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
 
                 <span class="cm">/*cycles through columns to print</span>
 <span class="cm">                each monkey part by part, will eventually print entire column*/</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">ants</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 
                     <span class="c1">// prints specific part of the monkey from the column</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ants</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">"\t"</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ants</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
 
                     <span class="c1">//this is new line between separate parts</span>
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
@@ -447,94 +451,85 @@ No more monkeys jumping on the bed
 <pre>
 Ants Marching up a Hill
 The ants go marching 0 by 0, hurrah hurrah
-
-
-
-
 The ants go marching 1 by 1, hurrah hurrah
- - - 	
-
- &gt;v&lt; 	
-
- &gt;O&lt; 	
-
- &gt;O&lt;  	
+ - -  
+ &gt;v&lt;  
+ &gt;O&lt;  
+ &gt;O&lt;   
 
 The ants go marching 2 by 2, hurrah hurrah
- - - 	
- | | 	
+ - -  
+ &gt;v&lt;  
+ &gt;O&lt;  
+ &gt;O&lt;   
 
- &gt;v&lt; 	
- 0 0  	
-
- &gt;O&lt; 	
- :X: 	
-
- &gt;O&lt;  	
- :X:  	
+ | |  
+ 0 0   
+ :X:  
+ :X:   
 
 The ants go marching 3 by 3, hurrah hurrah
- - - 	
- | | 	
- *  * 	
+ - -  
+ &gt;v&lt;  
+ &gt;O&lt;  
+ &gt;O&lt;   
 
- &gt;v&lt; 	
- 0 0  	
- '-0-' 	
+ | |  
+ 0 0   
+ :X:  
+ :X:   
 
- &gt;O&lt; 	
- :X: 	
- --0-- 	
-
- &gt;O&lt;  	
- :X:  	
- .-0-. 	
+ *  *  
+ '-0-'  
+ --0--  
+ .-0-.  
 
 The ants go marching 4 by 4, hurrah hurrah
- - - 	
- | | 	
- *  * 	
- - - 	
+ - -  
+ &gt;v&lt;  
+ &gt;O&lt;  
+ &gt;O&lt;   
 
- &gt;v&lt; 	
- 0 0  	
- '-0-' 	
- -o- 	
+ | |  
+ 0 0   
+ :X:  
+ :X:   
 
- &gt;O&lt; 	
- :X: 	
- --0-- 	
- - - 	
+ *  *  
+ '-0-'  
+ --0--  
+ .-0-.  
 
- &gt;O&lt;  	
- :X:  	
- .-0-. 	
- -o- 	
+ - -  
+ -o-  
+ - -  
+ -o-  
 
 The ants go marching 5 by 5, hurrah hurrah
- - - 	
- | | 	
- *  * 	
- - - 	
- }  { 	
+ - -  
+ &gt;v&lt;  
+ &gt;O&lt;  
+ &gt;O&lt;   
 
- &gt;v&lt; 	
- 0 0  	
- '-0-' 	
- -o- 	
- '--' 	
+ | |  
+ 0 0   
+ :X:  
+ :X:   
 
- &gt;O&lt; 	
- :X: 	
- --0-- 	
- - - 	
- ---- 	
+ *  *  
+ '-0-'  
+ --0--  
+ .-0-.  
 
- &gt;O&lt;  	
- :X:  	
- .-0-. 	
- -o- 	
- .--. 	
+ - -  
+ -o-  
+ - -  
+ -o-  
+
+ }  {  
+ '--'  
+ ----  
+ .--.  
 
 And they all go marching down into the ground
              Fin              
