@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      5 min read
     
 </span></p>
 
@@ -156,9 +156,9 @@ window.onload = wrap_img;
        <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>  <span class="c1">// buffer type </span>
         <span class="k">try</span> <span class="p">{</span>
             <span class="c1">// Name of file and directories</span>
-            <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"cake"</span><span class="p">;</span>
-            <span class="n">String</span> <span class="n">in</span> <span class="o">=</span> <span class="s">"images/"</span><span class="p">;</span>
-            <span class="n">String</span> <span class="n">out</span> <span class="o">=</span> <span class="s">"images/tmp/"</span><span class="p">;</span>
+            <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"monalisa"</span><span class="p">;</span>
+            <span class="n">String</span> <span class="n">in</span> <span class="o">=</span> <span class="s">"ghtop_images/"</span><span class="p">;</span>
+            <span class="n">String</span> <span class="n">out</span> <span class="o">=</span> <span class="s">"ghtop_images/tmp/"</span><span class="p">;</span>
 
             <span class="c1">// Either use URL or File for reading image using ImageIO</span>
             <span class="n">File</span> <span class="n">imageFile</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">in</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">);</span>
@@ -183,26 +183,6 @@ window.onload = wrap_img;
 
 <div class="output_wrapper">
 <div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>javax.imageio.IIOException: Can't read input file!
-	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1308)
-	at REPL.$JShell$16D$ImageIOTest.main($JShell$16D.java:48)
-	at REPL.$JShell$46.do_it$($JShell$46.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.github.spencerpark.ijava.execution.IJavaExecutionControl.lambda$execute$1(IJavaExecutionControl.java:95)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 
@@ -411,7 +391,7 @@ window.onload = wrap_img;
 
     <span class="c1">// tester/driver</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="p">{</span>
-        <span class="n">Pics</span> <span class="n">monaLisa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pics</span><span class="p">(</span><span class="s">"cake"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">Pics</span> <span class="n">monaLisa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pics</span><span class="p">(</span><span class="s">"monalisa"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
         <span class="n">monaLisa</span><span class="p">.</span><span class="na">printStats</span><span class="p">(</span><span class="s">"Original"</span><span class="p">);</span>
         <span class="n">monaLisa</span><span class="p">.</span><span class="na">resize</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
         <span class="n">monaLisa</span><span class="p">.</span><span class="na">printStats</span><span class="p">(</span><span class="s">"Scaled"</span><span class="p">);</span>
@@ -431,21 +411,9 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Original: 0 0x0  ghtop_images/cake.png
-Scaled: 0 0x0  ghtop_images/cake.png
+<pre>Original: 3299776 1470x1530  ghtop_images/monalisa.png
+Scaled: 470918 485x505  ghtop_images/tmp/monalisa.png
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">java.lang.NullPointerException: null</span>
-<span class="ansi-red-intense-fg ansi-bold">	at Pics.convertToAscii(#34:1)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at Pics.main(#34:1)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at .(#47:1)</span></pre>
 </div>
 </div>
 
