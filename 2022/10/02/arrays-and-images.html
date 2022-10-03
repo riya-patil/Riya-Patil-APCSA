@@ -515,36 +515,6 @@ Scaled: 0 0x0  ghtop_images/cake.png
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"Red"</span><span class="p">)){</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
-                    <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">col</span><span class="p">.</span><span class="na">getRed</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span><span class="na">getRGB</span><span class="p">();</span>
-                    <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">rgb</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"Blue"</span><span class="p">)){</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
-                    <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()).</span><span class="na">getRGB</span><span class="p">();</span>
-                    <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">rgb</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"Green"</span><span class="p">)){</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
-                    <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="na">getGreen</span><span class="p">(),</span> <span class="mi">0</span><span class="p">).</span><span class="na">getRGB</span><span class="p">();</span>
-                    <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">rgb</span><span class="p">);</span>
-    
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"Gray"</span><span class="p">)){</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -599,10 +569,7 @@ Scaled: 0 0x0  ghtop_images/cake.png
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ColorScale</span> <span class="n">BlueSunset</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ColorScale</span><span class="p">(</span><span class="s">"cake"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
-        <span class="n">BlueSunset</span><span class="p">.</span><span class="na">scale</span><span class="p">(</span><span class="s">"Red"</span><span class="p">);</span>
-        <span class="n">BlueSunset</span><span class="p">.</span><span class="na">scale</span><span class="p">(</span><span class="s">"Green"</span><span class="p">);</span>
-        <span class="n">BlueSunset</span><span class="p">.</span><span class="na">scale</span><span class="p">(</span><span class="s">"Blue"</span><span class="p">);</span>
+        <span class="n">ColorScale</span> <span class="n">cake</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ColorScale</span><span class="p">(</span><span class="s">"cake"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
         <span class="n">BlueSunset</span><span class="p">.</span><span class="na">scale</span><span class="p">(</span><span class="s">"Gray"</span><span class="p">);</span>
     <span class="p">}</span>
 
@@ -616,6 +583,15 @@ Scaled: 0 0x0  ghtop_images/cake.png
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://cdn.discordapp.com/attachments/783003505928962078/1026301883058499654/unknown.png">Original</a></p>
+<p><a href="https://cdn.discordapp.com/attachments/783003505928962078/1026375584017809498/output-onlineimagetools.png">Gray</a></p>
+
+</div>
+</div>
+</div>
 </div>
 
 
