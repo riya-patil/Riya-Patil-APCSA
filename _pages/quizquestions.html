@@ -1,12 +1,55 @@
+---
+layout: default
+permalink: /Quiz/
+title: Safety Quiz
+search_exclude: true
+---
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
     <title>Safety Quiz</title>
-</head>
+    </head>
 <body>
-    
+Question 1: 1+1?<br>
+<input type = "radio" name="question1" id="correct1" >2<br>
+<input type = "radio" name="question1" >8<br>
+<input type = "radio" name="question1" >10<br>
+<input type = "radio" name="question1" >9<br>
+
+Question 2: 2+2?<br>
+<input type = "radio" name="question2" >54<br>
+<input type = "radio" name="question2" id="correct2">4<br>
+<input type = "radio" name="question2" >11<br>
+<input type = "radio" name="question2" >9<br>
+
+Question 3: 3+3?<br>
+<input type = "radio" name="question3" >132<br>
+<input type = "radio" name="question3" id="correct3">6<br>
+<input type = "radio" name="question3" >10<br>
+<input type = "radio" name="question3" >0<br>
+
+<input type="submit" name="submit" value="submitQuiz" onclick="
+    result()">
+
+<script type="text/javascript">
+    function result() {
+        var score=0;
+        if (document.getElementById('correct1').checked)
+        {
+            score++;
+        }
+        if (document.getElementById('correct2').checked)
+        {
+            score++;
+        }
+        if (document.getElementById('correct3').checked)
+        {
+            score++;
+        }
+        
+        document.write("Your score is: "+score);
+    }
+</script>
 </body>
 </html>
