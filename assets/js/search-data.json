@@ -260,16 +260,10 @@
   
 
   
-  
-
-  
 
   
   
 
-  
-
-  
   
 
   
@@ -281,7 +275,15 @@
   
 
   
-      ,"page11": {
+  
+
+  
+
+  
+  
+
+  
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://riya-patil.github.io/Riya-Patil-APCSA/robots.txt",
