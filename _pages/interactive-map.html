@@ -1,18 +1,27 @@
 ---
 layout: default
 permalink: /Map/
-title: World Map Search
+title: World Map
 search_exclude: true
 ---
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>Search Map</title>
-    </head>
-<body>
-  <img src="cake.png" alt="Cake" usemap="#cake">
 
-  <map name="cake">
-    <area shape="rect" coords="34,44,270,351" alt="Frosting" href="cake.htm">
-  </map>
-</body>
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+    <meta charset="utf-8" />
+    <title> Create a clickable image with smtutor.com </title>
+    </head>
+    <body style="margin: 0 auto; width:780px;">
+    <p style="text-align:center; font-size:35px; color:red;"> Search For Your Country </p>
+    <h4> NOTE </h4>
+    <p> The rectangle coordinates: (x1, y1) (x2, y2) means: left top and right bottom </p>
+    <p> The circle coordinates: (x, y, radius) </p>
+    <li class="sidenav">
+        <img src="https://simplemaps.com/static/demos/resources/svg-library/svgs/world.svg">
+    </li>
+    <map name="worldmap">
+    <area shape="rect" coords="67,131,215,195" alt="North America" >
+    <area shape="cirlce" coords="969,426,88" alt="North America" >
+    </map>
+    </body>
+</html>
