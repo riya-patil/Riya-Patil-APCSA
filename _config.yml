@@ -81,7 +81,7 @@ html_escape:
   description: false
 
 # Everything below here should be left alone. Modifications may break fastpages
-future: false
+future: true
 theme: minima
 plugins:
   - jekyll-feed
