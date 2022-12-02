@@ -130,6 +130,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Casting">Casting </a></li>
 <li class="toc-entry toc-h3"><a href="#HW">HW </a></li>
 </ul><!--
 #################################################
@@ -150,11 +151,58 @@ window.onload = wrap_img;
 <li>To print with a new line, use System.out.println();</li>
 <li>To comment your code, use // for single line comments and /**/ for multiple lines</li>
 </ul>
-<p>Hacks below:</p>
+<h3 id="Casting">
+<a class="anchor" href="#Casting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting<a class="anchor-link" href="#Casting"> </a>
+</h3>
+<ul>
+<li>Assigning a value of one primitive data type to another type; operators like int and doubles</li>
+<li>Division - dividing two ints create one int</li>
+<li>Truncating - fraction part of floating point value is truncated </li>
+<li>Rounding - rounds to nearest int</li>
+</ul>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Casting</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">8</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span> <span class="c1">//this will result in single int without decimal</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mf">8.0</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span> <span class="c1">//can also be used with double</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Casting</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+1.6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
