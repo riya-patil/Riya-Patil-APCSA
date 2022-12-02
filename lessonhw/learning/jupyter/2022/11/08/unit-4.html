@@ -130,6 +130,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Nested-Loop">Nested Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#While-Loop">While Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#FOR-LOOPS">FOR LOOPS </a></li>
 <li class="toc-entry toc-h3"><a href="#HW---Caesar-Cipher">HW - Caesar Cipher </a></li>
 </ul><!--
 #################################################
@@ -144,27 +147,34 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>
-<p>An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet.</p>
-</li>
-<li>
-<p>It is called an "iterator" because "iterating" is the technical term for looping. To use an Iterator, you must import it from the java.util package.</p>
-</li>
-<li>
-<p>for, while, ect</p>
-</li>
-<li>
-<p>sequence of instructions or code being repeated until a specific end result is achieved</p>
-</li>
-<li>
-<p>MacroMonkeys repo with caesar cipher shifts</p>
-</li>
-</ul>
-<p>More:</p>
-<ul>
+<li>An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet. </li>
+<li>It is called an "iterator" because "iterating" is the technical term for looping. To use an Iterator, you must import it from the java.util package.</li>
+<li>for, while, ect</li>
+<li>sequence of instructions or code being repeated until a specific end result is achieved</li>
+<li>MacroMonkeys repo with caesar cipher shifts</li>
 <li>Iteration is crucial to making coding simpler and less convoluted</li>
 <li>Exam weights Iteration as 17.5-22.5% of the test, with 7-9 MC and part of FRQ 1</li>
-<li>WHILE LOOP: Repeats lines of code until a certain condition evaluates to false</li>
+</ul>
+<h3 id="Nested-Loop">
+<a class="anchor" href="#Nested-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Loop<a class="anchor-link" href="#Nested-Loop"> </a>
+</h3>
+<ul>
+<li>nested for loop places one for loop inside another for loop</li>
+<li>inner loop repeats for every iteration of the outer one</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While-Loop">
+<a class="anchor" href="#While-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loop<a class="anchor-link" href="#While-Loop"> </a>
+</h3>
+<ul>
+<li>repeats a specific block of code for as long until a certain condition is met, then it stops</li>
+<li>do while loop - executes code at least once and then repeatedly depending on a boolean condition at the end of a block</li>
 </ul>
 
 </div>
@@ -177,20 +187,30 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhileLoops</span> <span class="p">{</span> <span class="c1">//hack 1</span>
-    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">450</span><span class="p">,</span><span class="mo">000</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">30</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">x</span> <span class="o">+=</span> <span class="n">x</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">;</span> <span class="c1">//increase by 5% each time through</span>
-            <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5450000</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">years</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">30000000</span><span class="p">){</span> <span class="c1">//hack 2 with while loop</span>
+    <span class="n">i</span> <span class="o">*=</span> <span class="mf">1.05</span><span class="p">;</span>
+    <span class="n">years</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
- 
-<span class="n">WhileLoops</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">years</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>35
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -200,7 +220,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>FOR LOOPS</p>
+<h3 id="FOR-LOOPS">
+<a class="anchor" href="#FOR-LOOPS" aria-hidden="true"><span class="octicon octicon-link"></span></a>FOR LOOPS<a class="anchor-link" href="#FOR-LOOPS"> </a>
+</h3>
 <ul>
 <li>the test condition is checked each time through the loop and the loop continues as long as the condition is true</li>
 <li>the loop control variable change is done at the end of each execution of the body of the loop</li>
@@ -229,6 +251,25 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+11
+12
+13
+14
+15
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

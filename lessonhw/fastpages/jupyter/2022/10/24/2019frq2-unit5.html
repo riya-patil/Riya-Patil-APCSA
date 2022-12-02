@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -130,6 +130,18 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Creating-a-Class">Creating a Class </a></li>
+<li class="toc-entry toc-h3"><a href="#Constructors">Constructors </a></li>
+<li class="toc-entry toc-h3"><a href="#Accessor-Method">Accessor Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Mutator-Method">Mutator Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Static-&-Class-Methods-and-Variables">Static &amp; Class Methods and Variables </a></li>
+<li class="toc-entry toc-h3"><a href="#Main-Method-&-Tester-Method">Main Method &amp; Tester Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Inheritance-&-Subclasses">Inheritance &amp; Subclasses </a></li>
+<li class="toc-entry toc-h3"><a href="#Overload-&-Override">Overload &amp; Override </a></li>
+<li class="toc-entry toc-h3"><a href="#Abstract-Class-&-Method">Abstract Class &amp; Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Late-Binding">Late Binding </a></li>
+<li class="toc-entry toc-h3"><a href="#Polymorphism">Polymorphism </a></li>
+<li class="toc-entry toc-h3"><a href="#Big-O-notation">Big O notation </a></li>
 <li class="toc-entry toc-h2"><a href="#Write-the-complete-StepTracker-class,-including-the-constructor-and-any-required-instance-variables-and-methods.-Your-implementation-must-meet-all-specifications-and-conform-to-the-example.">Write the complete StepTracker class, including the constructor and any required instance variables and methods. Your implementation must meet all specifications and conform to the example. </a></li>
 </ul><!--
 #################################################
@@ -154,6 +166,382 @@ window.onload = wrap_img;
 <p>1) declare object of the class in the main method
 2) call the method
 3) write the method header and body</p>
+<h3 id="Creating-a-Class">
+<a class="anchor" href="#Creating-a-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Class<a class="anchor-link" href="#Creating-a-Class"> </a>
+</h3>
+<ul>
+<li>creating classes provides templates for creating objects, which can bind code into data</li>
+<li>has definitions of methods and data</li>
+<li>Class names should be nouns, in mixed cases with the first letter of each internal word capitalized. </li>
+<li>Interfaces names should also be capitalized just like class names.</li>
+<li>Use whole words and must avoid acronyms and abbreviations</li>
+</ul>
+<h3 id="Constructors">
+<a class="anchor" href="#Constructors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Constructors<a class="anchor-link" href="#Constructors"> </a>
+</h3>
+<ul>
+<li>used to create the instance of the class</li>
+<li>name is same as class name and has no return type and only returns object to class; adding return would make it a method </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Accessor-Method">
+<a class="anchor" href="#Accessor-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessor Method<a class="anchor-link" href="#Accessor-Method"> </a>
+</h3>
+<ul>
+<li>Accessor methods return the value of a private method</li>
+<li>getter returns the value of data types using the accessor method (instance method to get or set values of an object)</li>
+</ul>
+<h3 id="Mutator-Method">
+<a class="anchor" href="#Mutator-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutator Method<a class="anchor-link" href="#Mutator-Method"> </a>
+</h3>
+<ul>
+<li>Mutator methods reset the value of a private variable</li>
+<li>relates to the setter because it updates the value of the variable</li>
+<li>
+<p>void type represents void return type as a class and contains a public value and is assigned the value of null since it isn’t instantiable</p>
+</li>
+<li>
+<p>this keyword refers to current object in a method or constructor</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">getVariable</span><span class="p">(){</span>
+<span class="c1">//accessor method</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setVariable</span><span class="p">(</span><span class="n">String</span> <span class="n">variable</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">variable</span> <span class="o">=</span> <span class="n">variable</span><span class="p">;</span> <span class="c1">//example of mutator method</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Static-&amp;-Class-Methods-and-Variables">
+<a class="anchor" href="#Static-&amp;-Class-Methods-and-Variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static &amp; Class Methods and Variables<a class="anchor-link" href="#Static-&amp;-Class-Methods-and-Variables"> </a>
+</h3>
+<ul>
+<li>Static vars are also called class variables because they belong to a class and not an instance</li>
+<li>Static method belongs to a class rather than an instance of class</li>
+<li>class methods are called on the class itself not a specific object</li>
+</ul>
+<p>ACCESS MODIFIERS:</p>
+<ul>
+<li>Keywords to control visibility of methods and constructors in classes</li>
+<li>Public means it can be accessed from anywhere</li>
+<li>Private means only within the same class</li>
+<li>protected means that it is accessed within the same package and outside with a child class</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Data</span> <span class="p">{</span>
+    <span class="c1">// private variable</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">main</span><span class="p">){</span>
+
+        <span class="c1">// create an object of Data</span>
+        <span class="n">Data</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Data</span><span class="p">();</span>
+
+        <span class="c1">// access private variable and field from another class</span>
+        <span class="n">d</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="c1">//error because private</span>
+<span class="n">Data</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">d.name</span><span class="ansi-black-intense-fg ansi-bold"> = "Hello";</span>
+<span class="ansi-red-intense-fg ansi-bold">name has private access in Data</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="c1">// protected method</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">display</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am an animal"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// create an object of Dog class</span>
+        <span class="n">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="p">();</span>
+         <span class="c1">// access protected method</span>
+        <span class="n">dog</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// public class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="c1">// public variable</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">legCount</span><span class="p">;</span>
+
+    <span class="c1">// public method</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">display</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am an animal."</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I have "</span> <span class="o">+</span> <span class="n">legCount</span> <span class="o">+</span> <span class="s">" legs."</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Main.java</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// accessing the public class</span>
+        <span class="n">Animal</span> <span class="n">animal</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span>
+
+        <span class="c1">// accessing the public variable</span>
+        <span class="n">animal</span><span class="p">.</span><span class="na">legCount</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+        <span class="c1">// accessing the public method</span>
+        <span class="n">animal</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Main-Method-&amp;-Tester-Method">
+<a class="anchor" href="#Main-Method-&amp;-Tester-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Method &amp; Tester Method<a class="anchor-link" href="#Main-Method-&amp;-Tester-Method"> </a>
+</h3>
+<ul>
+<li>Main contains code to execute and call other methods, usually the entry point to execute Java program</li>
+<li>Tester method evaluates code to see if it fulfills requirements</li>
+</ul>
+<h3 id="Inheritance-&amp;-Subclasses">
+<a class="anchor" href="#Inheritance-&amp;-Subclasses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance &amp; Subclasses<a class="anchor-link" href="#Inheritance-&amp;-Subclasses"> </a>
+</h3>
+<ul>
+<li>Method to create hierarchy between classes by inheriting from other classes</li>
+<li>parent and child classes</li>
+<li>extends extend a class to show its inherited and extends functionality</li>
+<li>Subclass inherits all methods and fields from superclass, and constructor can be carried out from subclass</li>
+<li>super refers to superclass or parent objects</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="c1">// methods and fields</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// use of extends keyword</span>
+  <span class="c1">// to perform inheritance</span>
+  <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span> <span class="c1">//dog subclass</span>
+  
+    <span class="c1">// methods and fields of Animal</span>
+    <span class="c1">// methods and fields of Dog</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Overload-&amp;-Override">
+<a class="anchor" href="#Overload-&amp;-Override" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overload &amp; Override<a class="anchor-link" href="#Overload-&amp;-Override"> </a>
+</h3>
+<ul>
+<li>Overload happens when there are two methods with same name but different arguments or parameters</li>
+<li>Method override happens when child class has the same method that is present in a parent class, overwrites base class method</li>
+</ul>
+<h3 id="Abstract-Class-&amp;-Method">
+<a class="anchor" href="#Abstract-Class-&amp;-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract Class &amp; Method<a class="anchor-link" href="#Abstract-Class-&amp;-Method"> </a>
+</h3>
+<ul>
+<li>Abstract class is a restricted class that cant be used to create objects and can only access if inherited from other class</li>
+<li>method can only be used in abstract class and has no implementation</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// create an abstract class</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Language</span> <span class="p">{</span>
+    <span class="c1">// fields and methods</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+  
+  <span class="c1">// try to create an object Language</span>
+  <span class="c1">// throws an error</span>
+  <span class="n">Language</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Language</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">  </span><span class="ansi-black-intense-fg ansi-bold">...</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal start of expression</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Language</span> <span class="p">{</span>
+
+    <span class="c1">// abstract method</span>
+    <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">method1</span><span class="p">();</span>
+  
+    <span class="c1">// regular method</span>
+    <span class="kt">void</span> <span class="nf">method2</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This is regular method"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Late-Binding">
+<a class="anchor" href="#Late-Binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Late Binding<a class="anchor-link" href="#Late-Binding"> </a>
+</h3>
+<ul>
+<li>Late binding is that compiler shouldn’t check arguments and no type checks on method call, if method names are mapped at runtime its late</li>
+</ul>
+<h3 id="Polymorphism">
+<a class="anchor" href="#Polymorphism" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polymorphism<a class="anchor-link" href="#Polymorphism"> </a>
+</h3>
+<ul>
+<li>Ability of class to provide different implementations of methods, such as overloading, overriding, late binding</li>
+</ul>
+<h3 id="Big-O-notation">
+<a class="anchor" href="#Big-O-notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big O notation<a class="anchor-link" href="#Big-O-notation"> </a>
+</h3>
+<ul>
+<li>How long an algorithm takes to run</li>
+<li>HashMap has O(1) which is same amount of time to execute</li>
+<li>Binary Search has O(log N) which means it takes an additional step each time data doubles</li>
+<li>Single and Nested loop is O(1)</li>
+</ul>
 
 </div>
 </div>
