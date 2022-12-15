@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 10 - Recursion | Riya</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 10 - Recursion" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://riya-patil.github.io/Riya-Patil-APCSA/fastpages/lessonhw/2022/12/14/unit10.html" />
+<meta property="og:url" content="https://riya-patil.github.io/Riya-Patil-APCSA/fastpages/lessonhw/2022/12/14/unit10.html" />
+<meta property="og:site_name" content="Riya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-14T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 10 - Recursion" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-14T00:00:00-06:00","datePublished":"2022-12-14T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Unit 10 - Recursion","mainEntityOfPage":{"@type":"WebPage","@id":"https://riya-patil.github.io/Riya-Patil-APCSA/fastpages/lessonhw/2022/12/14/unit10.html"},"url":"https://riya-patil.github.io/Riya-Patil-APCSA/fastpages/lessonhw/2022/12/14/unit10.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Riya-Patil-APCSA/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://riya-patil.github.io/Riya-Patil-APCSA/feed.xml" title="Riya" /><link rel="shortcut icon" type="image/x-icon" href="/Riya-Patil-APCSA/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Riya-Patil-APCSA/">Riya</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Riya-Patil-APCSA/about/">About Riya</a><a class="page-link" href="/Riya-Patil-APCSA/Map/">World-Map</a><a class="page-link" href="/Riya-Patil-APCSA/n@tm/">Night @ the Museum</a><a class="page-link" href="/Riya-Patil-APCSA/Quiz/">Safety Quiz</a><a class="page-link" href="/Riya-Patil-APCSA/search/">Search</a><a class="page-link" href="/Riya-Patil-APCSA/categories/">Tag</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 10 - Recursion</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-14T00:00:00-06:00" itemprop="datePublished">
+        Dec 14, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Riya-Patil-APCSA/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Riya-Patil-APCSA/categories/#lessonhw">lessonhw</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/riya-patil/Riya-Patil-APCSA/tree/master/_notebooks/2022-12-14-unit10.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Riya-Patil-APCSA/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/riya-patil/Riya-Patil-APCSA/master?filepath=_notebooks%2F2022-12-14-unit10.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Riya-Patil-APCSA/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/riya-patil/Riya-Patil-APCSA/blob/master/_notebooks/2022-12-14-unit10.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Riya-Patil-APCSA/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Friya-patil%2FRiya-Patil-APCSA%2Fblob%2Fmaster%2F_notebooks%2F2022-12-14-unit10.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Riya-Patil-APCSA/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Binary-Search">Binary Search </a></li>
+<li class="toc-entry toc-h3"><a href="#Big-O-notation">Big O notation </a></li>
+<li class="toc-entry toc-h3"><a href="#Linear-Recursion">Linear Recursion </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-14-unit10.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>A recursive method is a method that calls itself - a subproblem that calls itself repeatedly</li>
+</ul>
+<p>Two parts to the method:</p>
+<ul>
+<li>a base case </li>
+<li>recursive call</li>
+</ul>
+<p>After multiple calls, the base case is reached where recursion is stopped and a value is returned</p>
+<p>Should be written first to avoid infinite recursion</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//example of base case</span>
+<span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// base case</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">else</span>    
+        <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>    
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Binary-Search">
+<a class="anchor" href="#Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search<a class="anchor-link" href="#Binary-Search"> </a>
+</h3>
+<ul>
+<li>Binary search algorithm</li>
+<li>Data must be in sorted order</li>
+<li>Keeps halving array until value is found</li>
+<li>More efficient than linear search (O(log2n) vs O(n))</li>
+</ul>
+<h3 id="Big-O-notation">
+<a class="anchor" href="#Big-O-notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big O notation<a class="anchor-link" href="#Big-O-notation"> </a>
+</h3>
+<ul>
+<li>How long an algorithm takes to run</li>
+<li>HashMap has O(1) which is same amount of time to execute</li>
+<li>Binary Search has O(log N) which means it takes an additional step each time data doubles</li>
+<li>Single and Nested loop is O(1)</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Java Program to Illustrate Recursive Binary Search</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+ 
+<span class="c1">// Main class</span>
+<span class="kd">class</span> <span class="nc">Binary</span> <span class="p">{</span>
+    <span class="c1">// Recursive binary search</span>
+    <span class="c1">// Returns index of x if it is present</span>
+    <span class="c1">// in arr[l..r], else return -1</span>
+    <span class="kt">int</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Restrict the boundary of right index</span>
+        <span class="c1">// and the left index to prevent</span>
+        <span class="c1">// overflow of indices</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">l</span> <span class="o">&lt;=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+ 
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+ 
+            <span class="c1">// If the element is present</span>
+            <span class="c1">// at the middle itself</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+ 
+            <span class="c1">// If element is smaller than mid, then it can</span>
+            <span class="c1">// only be present in left subarray</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+ 
+            <span class="c1">// Else the element can only be present</span>
+            <span class="c1">// in right subarray</span>
+            <span class="k">return</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+ 
+        <span class="c1">// We reach here when element is not present in</span>
+        <span class="c1">// array</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+    
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Linear-Recursion">
+<a class="anchor" href="#Linear-Recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear Recursion<a class="anchor-link" href="#Linear-Recursion"> </a>
+</h3>
+<p>A function that only makes a single call to itself each time the function runs (as opposed to one that would call itself multiple times during its execution)</p>
+<ul>
+<li>
+<p>Selection Sort: The algorithm works by repeatedly finding the minimum element (considering ascending order) from the unsorted part and putting it at the end of the sorted part</p>
+</li>
+<li>
+<p>Merge Sort: It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/Riya-Patil-APCSA/fastpages/lessonhw/2022/12/14/unit10.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Riya-Patil-APCSA/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Riya-Patil-APCSA/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="“https://github.com/nighthawkcoders”" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://twitter.com/NighthawkCoding”" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q”" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
