@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | Riya</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://riya-patil.github.io/Riya-Patil-APCSA/2023/03/14/generictypes.html" />
+<meta property="og:url" content="https://riya-patil.github.io/Riya-Patil-APCSA/2023/03/14/generictypes.html" />
+<meta property="og:site_name" content="Riya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-14T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-14T00:00:00-05:00","datePublished":"2023-03-14T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://riya-patil.github.io/Riya-Patil-APCSA/2023/03/14/generictypes.html"},"url":"https://riya-patil.github.io/Riya-Patil-APCSA/2023/03/14/generictypes.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Riya-Patil-APCSA/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://riya-patil.github.io/Riya-Patil-APCSA/feed.xml" title="Riya" /><link rel="shortcut icon" type="image/x-icon" href="/Riya-Patil-APCSA/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Riya-Patil-APCSA/">Riya</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Riya-Patil-APCSA/about/">About Riya</a><a class="page-link" href="/Riya-Patil-APCSA/Map/">World-Map</a><a class="page-link" href="/Riya-Patil-APCSA/n@tm/">Night @ the Museum</a><a class="page-link" href="/Riya-Patil-APCSA/Quiz/">Safety Quiz</a><a class="page-link" href="/Riya-Patil-APCSA/search/">Search</a><a class="page-link" href="/Riya-Patil-APCSA/categories/">Tag</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-14T00:00:00-05:00" itemprop="datePublished">
+        2023-03-14 00:00:00 -0500
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          
+          
+          
+          
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-14-generictypes.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>  <span class="c1">// Queue interface uses LL implementation</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;John&quot;</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Jane&quot;</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>  <span class="c1">// Queue interface uses LL implementation</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;John&quot;</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Jane&quot;</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span>
+<span class="c1">// Collections has a toArray convertion</span>
+<span class="n">Object</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">toArray</span><span class="p">();</span>
+
+<span class="c1">// Empty queue</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Empty Queue&quot;</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// Interate while size</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
+
+<span class="c1">// Iterate of array</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Iterate over Array&quot;</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">Object</span> <span class="n">a</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="c1">// Type is Object from convertion</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Empty Queue
+John
+Jane
+Bob
+Iterate over Array
+John
+Jane
+Bob
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/* This is wrapper class...</span>
+<span class="cm"> Objective would be to push more functionality into this Class to enforce consistent definition</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Generics</span> <span class="p">{</span>
+	<span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">masterType</span> <span class="o">=</span> <span class="s">&quot;Generic&quot;</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">type</span><span class="p">;</span>	<span class="c1">// extender should define their data type</span>
+
+	<span class="c1">// generic enumerated interface</span>
+	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">KeyTypes</span> <span class="p">{</span>
+		<span class="n">String</span> <span class="nf">name</span><span class="p">();</span>
+	<span class="p">}</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">();</span>  	<span class="c1">// this method helps force usage of KeyTypes</span>
+
+	<span class="c1">// getter</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getMasterType</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">masterType</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// getter</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">type</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// setter</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setType</span><span class="p">(</span><span class="n">String</span> <span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="c1">// this method is used to establish key order</span>
+	<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">();</span>
+
+	<span class="c1">// static print method used by extended classes</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">Generics</span><span class="o">[]</span> <span class="n">objs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// print &#39;Object&#39; properties</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">getClass</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">objs</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+
+		<span class="c1">// print &#39;Generics&#39; properties</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">Generics</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">objs</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>	<span class="c1">// Look at properties of 1st element</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+					<span class="n">obj</span><span class="p">.</span><span class="na">getMasterType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> 
+					<span class="n">obj</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span>
+					<span class="s">&quot; listed by &quot;</span> <span class="o">+</span>
+					<span class="n">obj</span><span class="p">.</span><span class="na">getKey</span><span class="p">());</span>
+		<span class="p">}</span>
+
+		<span class="c1">// print &quot;Generics: Objects&#39;</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span> <span class="p">:</span> <span class="n">objs</span><span class="p">)</span>	<span class="c1">// observe that type is Opaque</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
+
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Alphabet</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
+	<span class="c1">// Class data</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">letter</span><span class="p">}</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>  <span class="c1">// constant used in data initialization</span>
+
+	<span class="c1">// Instance data</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">char</span> <span class="n">letter</span><span class="p">;</span>
+	
+	<span class="cm">/*</span>
+<span class="cm">	 * single letter object</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="nf">Alphabet</span><span class="p">(</span><span class="kt">char</span> <span class="n">letter</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">&quot;Alphabet&quot;</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">letter</span> <span class="o">=</span> <span class="n">letter</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* &#39;Generics&#39; requires getKey to help enforce KeyTypes usage */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Alphabet</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+
+	<span class="cm">/* &#39;Generics&#39; requires toString override</span>
+<span class="cm">	 * toString provides data based off of Static Key setting</span>
+<span class="cm">	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">letter</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">letter</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Test data initializer for upper case Alphabet</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Alphabet</span><span class="o">[]</span> <span class="nf">alphabetData</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Alphabet</span><span class="o">[]</span> <span class="n">alphabet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Alphabet</span><span class="o">[</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">size</span><span class="o">]</span><span class="p">;</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">Alphabet</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">alphabet</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Alphabet</span><span class="p">(</span> <span class="p">(</span><span class="kt">char</span><span class="p">)(</span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="p">);</span>
+		<span class="p">}</span> 	
+		<span class="k">return</span> <span class="n">alphabet</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="cm">/* </span>
+<span class="cm">	 * main to test Animal class</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Inheritance Hierarchy</span>
+		<span class="n">Alphabet</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">alphabetData</span><span class="p">();</span>
+
+		<span class="c1">// print with title</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// print letter only</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">);</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+<span class="p">}</span>
+<span class="n">Alphabet</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>class [LREPL.$JShell$39$Alphabet; 26
+Generic: Alphabet listed by title
+Alphabet: A
+Alphabet: B
+Alphabet: C
+Alphabet: D
+Alphabet: E
+Alphabet: F
+Alphabet: G
+Alphabet: H
+Alphabet: I
+Alphabet: J
+Alphabet: K
+Alphabet: L
+Alphabet: M
+Alphabet: N
+Alphabet: O
+Alphabet: P
+Alphabet: Q
+Alphabet: R
+Alphabet: S
+Alphabet: T
+Alphabet: U
+Alphabet: V
+Alphabet: W
+Alphabet: X
+Alphabet: Y
+Alphabet: Z
+
+class [LREPL.$JShell$39$Alphabet; 26
+Generic: Alphabet listed by letter
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.hacks.methodsDataTypes</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Menu: custom implementation</span>
+<span class="cm"> * @author     John Mortensen</span>
+<span class="cm"> *</span>
+<span class="cm"> * Uses String to contain Title for an Option</span>
+<span class="cm"> * Uses Runnable to store Class-Method to be run when Title is selected</span>
+<span class="cm"> */</span>
+
+<span class="c1">// The Menu Class has a HashMap of Menu Rows</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
+    <span class="c1">// Format</span>
+    <span class="c1">// Key {0, 1, 2, ...} created based on order of input menu</span>
+    <span class="c1">// Value {MenuRow0, MenuRow1, MenuRow2,...} each corresponds to key</span>
+    <span class="c1">// MenuRow  {&lt;Exit,Noop&gt;, Option1, Option2, ...}</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">MenuRow</span><span class="o">&gt;</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Constructor for Menu,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  rows,  is the row data for menu.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Menu</span><span class="p">(</span><span class="n">MenuRow</span><span class="o">[]</span> <span class="n">rows</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">MenuRow</span> <span class="n">row</span> <span class="p">:</span> <span class="n">rows</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Build HashMap for lookup convenience</span>
+            <span class="n">menu</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="na">getTitle</span><span class="p">(),</span> <span class="n">row</span><span class="p">.</span><span class="na">getAction</span><span class="p">()));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Get Row from Menu,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  i,  HashMap key (k)</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  MenuRow, the selected menu</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">MenuRow</span> <span class="nf">get</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">menu</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Iterate through and print rows in HashMap</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">MenuRow</span><span class="o">&gt;</span> <span class="n">pair</span> <span class="p">:</span> <span class="n">menu</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pair</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; ==&gt; &quot;</span> <span class="o">+</span> <span class="n">pair</span><span class="p">.</span><span class="na">getValue</span><span class="p">().</span><span class="na">getTitle</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  To test run Driver</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Driver</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="c1">// The MenuRow Class has title and action for individual line item in menu</span>
+<span class="kd">class</span> <span class="nc">MenuRow</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">title</span><span class="p">;</span>       <span class="c1">// menu item title</span>
+    <span class="n">Runnable</span> <span class="n">action</span><span class="p">;</span>    <span class="c1">// menu item action, using Runnable</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Constructor for MenuRow,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  title,  is the description of the menu item</span>
+<span class="cm">     * @param  action, is the run-able action for the menu item</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">MenuRow</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">Runnable</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">action</span> <span class="o">=</span> <span class="n">action</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Getters</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="n">Runnable</span> <span class="nf">getAction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Runs the action using Runnable (.run)</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">action</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// The Main Class illustrates initializing and using Menu with Runnable action</span>
+<span class="kd">class</span> <span class="nc">Driver</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     *  Menu Control Example</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Row initialize</span>
+        <span class="n">MenuRow</span><span class="o">[]</span> <span class="n">rows</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MenuRow</span><span class="o">[]</span><span class="p">{</span>
+            <span class="c1">// lambda style, () -&gt; to point to Class.Method</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">&quot;Exit&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">&quot;Do Nothing&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">DoNothingByValue</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">&quot;Swap if Hi-Low&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">IntByReference</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">&quot;Matrix Reverse&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Matrix</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">&quot;Diverse Array&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Matrix</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">&quot;Random Squirrels&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Number</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">))</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Menu construction</span>
+        <span class="n">Menu</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Menu</span><span class="p">(</span><span class="n">rows</span><span class="p">);</span>
+
+        <span class="c1">// Run menu forever, exit condition contained in loop</span>
+        <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hacks Menu:&quot;</span><span class="p">);</span>
+            <span class="c1">// print rows</span>
+            <span class="n">menu</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+
+            <span class="c1">// Scan for input</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+                <span class="c1">// menu action</span>
+                <span class="k">try</span> <span class="p">{</span>
+                    <span class="n">MenuRow</span> <span class="n">row</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">selection</span><span class="p">);</span>
+                    <span class="c1">// stop menu</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Exit&quot;</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">scan</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> 
+                            <span class="n">scan</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>  <span class="c1">// scanner resource requires release</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="c1">// run option</span>
+                    <span class="n">row</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Invalid selection %d\n&quot;</span><span class="p">,</span> <span class="n">selection</span><span class="p">);</span>
+                <span class="p">}</span>
+
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not a number&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/Riya-Patil-APCSA/2023/03/14/generictypes.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Riya-Patil-APCSA/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://riya-patil.github.io/Riya-Patil-APCSA/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="“https://github.com/nighthawkcoders”" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://twitter.com/NighthawkCoding”" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q”" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
