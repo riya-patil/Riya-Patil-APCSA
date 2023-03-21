@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      17 min read
     
 </span></p>
 
@@ -290,6 +290,77 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>class [LREPL.$JShell$21$Alphabet; 26
+Generic: Alphabet listed by title
+Alphabet: A
+Alphabet: B
+Alphabet: C
+Alphabet: D
+Alphabet: E
+Alphabet: F
+Alphabet: G
+Alphabet: H
+Alphabet: I
+Alphabet: J
+Alphabet: K
+Alphabet: L
+Alphabet: M
+Alphabet: N
+Alphabet: O
+Alphabet: P
+Alphabet: Q
+Alphabet: R
+Alphabet: S
+Alphabet: T
+Alphabet: U
+Alphabet: V
+Alphabet: W
+Alphabet: X
+Alphabet: Y
+Alphabet: Z
+
+class [LREPL.$JShell$21$Alphabet; 26
+Generic: Alphabet listed by letter
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -553,7 +624,7 @@ Chocolate
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Movie">Movie<a class="anchor-link" href="#Movie"> </a></h1>
+<h1 id="MortLingo">MortLingo<a class="anchor-link" href="#MortLingo"> </a></h1>
 </div>
 </div>
 </div>
@@ -564,32 +635,30 @@ Chocolate
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Movie</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Lingo</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
 	<span class="c1">// Class data</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Movie</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
-	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">genre</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">enjoy</span><span class="p">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">lang</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Lingo</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">lang</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">correct</span><span class="p">}</span>
 
 	<span class="c1">// Instance data</span>
-	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
-	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">genre</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">rating</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">enjoy</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">lang</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">level</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">correct</span><span class="p">;</span>
 
 	<span class="c1">// Constructor</span>
 
-	<span class="n">Movie</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">genre</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rating</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">enjoy</span><span class="p">)</span>
+	<span class="n">Lingo</span><span class="p">(</span><span class="n">String</span> <span class="n">lang</span><span class="p">,</span> <span class="n">String</span> <span class="n">level</span><span class="p">,</span> <span class="kt">int</span> <span class="n">correct</span><span class="p">)</span>
 	<span class="p">{</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">&quot;Movie&quot;</span><span class="p">);</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">genre</span> <span class="o">=</span> <span class="n">genre</span><span class="p">;</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">rating</span> <span class="o">=</span> <span class="n">rating</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">enjoy</span> <span class="o">=</span> <span class="n">enjoy</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">&quot;Lingo&quot;</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">lang</span> <span class="o">=</span> <span class="n">lang</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">level</span> <span class="o">=</span> <span class="n">level</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">correct</span> <span class="o">=</span> <span class="n">correct</span><span class="p">;</span>
 	<span class="p">}</span>
 
 	<span class="cm">/* &#39;Generics&#39; requires getKey to help enforce KeyTypes usage */</span>
 	<span class="nd">@Override</span>
-	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Movie</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Lingo</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
 
 	<span class="cm">/* &#39;Generics&#39; requires toString override</span>
 <span class="cm">	 * toString provides data based off of Static Key setting</span>
@@ -597,44 +666,48 @@ Chocolate
 	<span class="nd">@Override</span>
 	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>		
 		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">genre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">genre</span><span class="p">;</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">rating</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">rating</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">lang</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">level</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">level</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">correct</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">correct</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">genre</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">rating</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">lang</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">level</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">correct</span><span class="p">;</span>
 		<span class="p">}</span>
 		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
 	<span class="p">}</span>
 
 	<span class="c1">// Test data initializer</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Movie</span><span class="o">[]</span> <span class="nf">movies</span><span class="p">()</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="k">new</span> <span class="n">Movie</span><span class="o">[]</span><span class="p">{</span>
-				<span class="k">new</span> <span class="n">Movie</span><span class="p">(</span><span class="s">&quot;The Book Thief&quot;</span><span class="p">,</span> <span class="s">&quot;Historical Fiction&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="kc">true</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Movie</span><span class="p">(</span><span class="s">&quot;A Silent Voice&quot;</span><span class="p">,</span> <span class="s">&quot;Romance&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">true</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Movie</span><span class="p">(</span><span class="s">&quot;Tenet&quot;</span><span class="p">,</span> <span class="s">&quot;Scientific Fiction&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="kc">false</span><span class="p">),</span>
-                <span class="k">new</span> <span class="n">Movie</span><span class="p">(</span><span class="s">&quot;Matilda&quot;</span><span class="p">,</span> <span class="s">&quot;Realistic Fiction&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="kc">false</span><span class="p">),</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Lingo</span><span class="o">[]</span> <span class="nf">languages</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Lingo</span><span class="o">[]</span><span class="p">{</span>
+				<span class="k">new</span> <span class="n">Lingo</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">,</span> <span class="s">&quot;Mastery&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Lingo</span><span class="p">(</span><span class="s">&quot;JavaScript&quot;</span><span class="p">,</span> <span class="s">&quot;Mastery&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Lingo</span><span class="p">(</span><span class="s">&quot;C#&quot;</span><span class="p">,</span> <span class="s">&quot;Beginner&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+                <span class="k">new</span> <span class="n">Lingo</span><span class="p">(</span><span class="s">&quot;Python&quot;</span><span class="p">,</span> <span class="s">&quot;Intermediate&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
 		<span class="p">};</span>
 	<span class="p">}</span>
 	
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
 	<span class="p">{</span>
 		<span class="c1">// Inheritance Hierarchy</span>
-		<span class="n">Movie</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">movies</span><span class="p">();</span>
+		<span class="n">Lingo</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">languages</span><span class="p">();</span>
 
-		<span class="c1">// print with title</span>
-		<span class="n">Movie</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
-		<span class="n">Movie</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+		<span class="c1">// print with language</span>
+		<span class="n">Lingo</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">lang</span><span class="p">);</span>
+		<span class="n">Lingo</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
 
-		<span class="c1">// print flavor only</span>
-		<span class="n">Movie</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">genre</span><span class="p">);</span>
-		<span class="n">Movie</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+		<span class="c1">// print level </span>
+		<span class="n">Lingo</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">level</span><span class="p">);</span>
+		<span class="n">Lingo</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// print correct out of 10</span>
+		<span class="n">Lingo</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">correct</span><span class="p">);</span>
+		<span class="n">Lingo</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
 	<span class="p">}</span>
 	
 <span class="p">}</span>
-<span class="n">Movie</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">Lingo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -647,19 +720,26 @@ Chocolate
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$13$Movie; 4
-Generic: Movie listed by title
-The Book Thief
-A Silent Voice
-Tenet
-Matilda
+<pre>class [LREPL.$JShell$40F$Lingo; 4
+Generic: Lingo listed by lang
+Java
+JavaScript
+C#
+Python
 
-class [LREPL.$JShell$13$Movie; 4
-Generic: Movie listed by genre
-Historical Fiction
-Romance
-Scientific Fiction
-Realistic Fiction
+class [LREPL.$JShell$40F$Lingo; 4
+Generic: Lingo listed by level
+Mastery
+Mastery
+Beginner
+Intermediate
+
+class [LREPL.$JShell$40F$Lingo; 4
+Generic: Lingo listed by correct
+9
+10
+4
+7
 
 </pre>
 </div>
@@ -1181,7 +1261,7 @@ Mixed data: Start seven slimy snakes sallying slowly slithered southward 0 1 2 3
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">//Hack 2</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Hack 2 - merge 2 queues</span>
 <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">queue1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <span class="c1">//offer adds an element to the end of the queue and </span>
 <span class="c1">//returns a boolean value indicating whether the operation was successful</span>
@@ -1228,7 +1308,7 @@ Mixed data: Start seven slimy snakes sallying slowly slithered southward 0 1 2 3
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">//Hack 3</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Hack 3 - </span>
 <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <span class="c1">//Create a new empty list to keep track of the indices that have already been shuffled</span>
 <span class="n">queue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
@@ -1303,6 +1383,48 @@ Mixed data: Start seven slimy snakes sallying slowly slithered southward 0 1 2 3
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Original queue: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Reversed queue: &quot;</span> <span class="o">+</span> <span class="n">reversedQueue</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lang1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="c1">//offer adds an element to the end of the queue and </span>
+<span class="c1">//returns a boolean value indicating whether the operation was successful</span>
+<span class="n">lang1</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="err">&#39;</span><span class="n">Java</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="n">lang1</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="err">&#39;</span><span class="n">JavaScript</span><span class="err">&#39;</span><span class="p">);</span>
+
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">lang2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">lang2</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="err">&#39;</span><span class="n">C</span><span class="err">#&#39;</span><span class="p">);</span>
+<span class="n">lang2</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="err">&#39;</span><span class="n">Python</span><span class="err">&#39;</span><span class="p">);</span>
+
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">mergedQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">lang1</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">lang2</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">lang1</span><span class="p">.</span><span class="na">peek</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">lang2</span><span class="p">.</span><span class="na">peek</span><span class="p">())</span> <span class="p">{</span> <span class="c1">//Retrieve the first element from each queue using the peek() method</span>
+        <span class="c1">//peek method returns the element at the front of the queue without removing it</span>
+        <span class="n">mergedQueue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="n">lang1</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">//Compare the two elements </span>
+        <span class="c1">//enqueue the smaller one to the new queue using the offer() method.</span>
+        <span class="n">mergedQueue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="n">lang2</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span>
+    <span class="p">}</span><span class="c1">//repeat</span>
+<span class="p">}</span>
+
+<span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">queue1</span><span class="p">);</span>
+<span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">queue2</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Merged queue: &quot;</span> <span class="o">+</span> <span class="n">mergedQueue</span><span class="p">);</span>
 </pre></div>
 
     </div>
