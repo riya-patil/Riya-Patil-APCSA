@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      353 min read
+      354 min read
     
 </span></p>
 
@@ -11175,26 +11175,30 @@ Runtime:
     <span class="c1">// Helper method to perform quick sort on the list</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">quickSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">pivotIndex</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
-            <span class="n">quickSort</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">pivotIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-            <span class="n">quickSort</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">pivotIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">partIndex</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
+            <span class="n">quickSort</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">partIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">quickSort</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">partIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span> <span class="c1">//used to divide the sub-array into two sub-arrays</span>
 
     <span class="c1">// Helper method to partition the list for quick sort</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">partition</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">//partition: part into 2 sub arrays</span>
-        <span class="kt">int</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">high</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">high</span><span class="o">]</span><span class="p">;</span> 
+        <span class="c1">//pivot element, which is the last element in the sub-array indicated by the "high" </span>
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">low</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">high</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// iterates through the subarray from "low" to "high - 1" with another index "j"</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">i</span><span class="o">++</span><span class="p">;</span>
                 <span class="n">swap</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+                <span class="c1">//"i" and "j" are swapped so that the lesser element is in the first subarray</span>
             <span class="p">}</span>
         <span class="p">}</span>
+        <span class="c1">// pivot element is swapped with the element at index "i + 1", so that it is now in between the two subarrays</span>
         <span class="n">swap</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
         <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="p">}</span><span class="c1">//The method then returns the index of the pivot element, which is now in its final sorted position.</span>
 
     <span class="c1">// Helper method to swap two elements in the list</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
@@ -11217,8 +11221,8 @@ Runtime:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Look up time: 5783 nanoseconds
-Binary search time: 1588146 nanoseconds
+<pre>Time to search for quiz result of 40 in hashmap: 2702 nanoseconds
+Time to search for result of 40 in binary: 667226 nanoseconds
 </pre>
 </div>
 </div>
