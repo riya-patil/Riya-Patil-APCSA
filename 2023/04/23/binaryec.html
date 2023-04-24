@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Binary Search extra credit hack 2 | Riya</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Binary Search extra credit hack 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://riya-patil.github.io/Riya-Patil-APCSA/2023/04/23/binaryec.html" />
+<meta property="og:url" content="https://riya-patil.github.io/Riya-Patil-APCSA/2023/04/23/binaryec.html" />
+<meta property="og:site_name" content="Riya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-23T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binary Search extra credit hack 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-23T00:00:00-05:00","datePublished":"2023-04-23T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Binary Search extra credit hack 2","mainEntityOfPage":{"@type":"WebPage","@id":"https://riya-patil.github.io/Riya-Patil-APCSA/2023/04/23/binaryec.html"},"url":"https://riya-patil.github.io/Riya-Patil-APCSA/2023/04/23/binaryec.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Riya-Patil-APCSA/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://riya-patil.github.io/Riya-Patil-APCSA/feed.xml" title="Riya" /><link rel="shortcut icon" type="image/x-icon" href="/Riya-Patil-APCSA/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Riya-Patil-APCSA/">Riya</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Riya-Patil-APCSA/about/">About Riya</a><a class="page-link" href="/Riya-Patil-APCSA/Map/">World Map</a><a class="page-link" href="/Riya-Patil-APCSA/n@tm/">Night @ the Museum</a><a class="page-link" href="/Riya-Patil-APCSA/Quiz/">Safety Quiz</a><a class="page-link" href="/Riya-Patil-APCSA/search/">Search</a><a class="page-link" href="/Riya-Patil-APCSA/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Binary Search extra credit hack 2</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-23T00:00:00-05:00" itemprop="datePublished">
+        2023-04-23 00:00:00 -0500
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          
+          
+          
+          
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-23-binaryec.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeBinary</span> <span class="p">{</span>
+
+    <span class="c1">// Merge sort</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// Sort first and second halves</span>
+            <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+            <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+
+            <span class="c1">// Merge the sorted halves</span>
+            <span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Merge two subarrays of arr[].</span>
+    <span class="c1">// First subarray is arr[l..m]</span>
+    <span class="c1">// Second subarray is arr[m+1..r]</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
+
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">L</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">R</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Binary search</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">right</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+
+         <span class="c1">// find the middle index of the array</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+            
+            <span class="c1">// middle element of the array is the target return index</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+           <span class="c1">// if the middle element is greater than the target, search the left half of the array</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="c1">// if the middle element is less than the target, search the right half of the array</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// target not found in the array</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+        <span class="kt">int</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+        <span class="c1">// sort the array using merge sort</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+
+        <span class="c1">// perform binary search to find the index of target</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Index of &quot;</span> <span class="o">+</span> <span class="n">target</span> <span class="o">+</span> <span class="s">&quot; is &quot;</span> <span class="o">+</span> <span class="n">index</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">target</span> <span class="o">+</span> <span class="s">&quot; not found in the array&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">MergeBinary</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Index of 7 is 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/Riya-Patil-APCSA/2023/04/23/binaryec.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Riya-Patil-APCSA/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://riya-patil.github.io/Riya-Patil-APCSA/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="“https://github.com/nighthawkcoders”" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://twitter.com/NighthawkCoding”" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q”" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Riya-Patil-APCSA/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
