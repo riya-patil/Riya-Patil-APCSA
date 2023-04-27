@@ -228,19 +228,24 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">MasterOrder</span> <span class="n">orderList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MasterOrder</span><span class="p">();</span>
+        <span class="c1">//makes a new order list</span>
         
         <span class="n">CookieOrder</span> <span class="n">order1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CookieOrder</span><span class="p">(</span><span class="s">&quot;chocolate chip&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
         <span class="n">CookieOrder</span> <span class="n">order2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CookieOrder</span><span class="p">(</span><span class="s">&quot;shortbread&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="c1">//makes two new cookie order objects</span>
         
         <span class="n">orderList</span><span class="p">.</span><span class="na">addOrder</span><span class="p">(</span><span class="n">order1</span><span class="p">);</span>
         <span class="n">orderList</span><span class="p">.</span><span class="na">addOrder</span><span class="p">(</span><span class="n">order2</span><span class="p">);</span>
+        <span class="c1">//adds objects to list</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Order 1:&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Type: &quot;</span> <span class="o">+</span> <span class="n">order1</span><span class="p">.</span><span class="na">getVariety</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;; Number of Boxes: &quot;</span><span class="o">+</span> <span class="n">order1</span><span class="p">.</span><span class="na">getNumBoxes</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Type: &quot;</span> <span class="o">+</span> <span class="n">order2</span><span class="p">.</span><span class="na">getVariety</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;; Number of Boxes: &quot;</span><span class="o">+</span> <span class="n">order2</span><span class="p">.</span><span class="na">getNumBoxes</span><span class="p">());</span>
+        <span class="c1">//gets variety and number of boxes of each added object</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total number of boxes in orderList: &quot;</span> <span class="o">+</span> <span class="n">orderList</span><span class="p">.</span><span class="na">getTotalBoxes</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; boxes&quot;</span><span class="p">);</span>
+        <span class="c1">//uses get total boxes method</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;------------------------------&quot;</span><span class="p">);</span>
 
@@ -248,6 +253,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Number of boxes removed: &quot;</span> <span class="o">+</span> <span class="n">orderList</span><span class="p">.</span><span class="na">removeVariety</span><span class="p">(</span><span class="s">&quot;chocolate chip&quot;</span><span class="p">));</span> 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Number of boxes left: &quot;</span> <span class="o">+</span> <span class="n">orderList</span><span class="p">.</span><span class="na">getTotalBoxes</span><span class="p">());</span>
+        <span class="c1">//removes boxes from chocolate chip and returns new total</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">CookieTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>

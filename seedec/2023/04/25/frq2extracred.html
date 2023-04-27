@@ -197,11 +197,13 @@ window.onload = wrap_img;
         <span class="n">Textbook</span> <span class="n">bio2015</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Biology"</span><span class="p">,</span> <span class="mf">49.75</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
         <span class="n">Textbook</span> <span class="n">bio2019</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Biology"</span><span class="p">,</span> <span class="mf">39.75</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
         <span class="n">Textbook</span> <span class="n">math</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Calculus"</span><span class="p">,</span> <span class="mf">45.25</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="c1">//creates new textbook objects for bio and calc</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Get Biology Book Info (2019):"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Edition: "</span> <span class="o">+</span> <span class="n">bio2019</span><span class="p">.</span><span class="na">getEdition</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Book Info: "</span> <span class="o">+</span> <span class="n">bio2019</span><span class="p">.</span><span class="na">getBookInfo</span><span class="p">());</span>
+        <span class="c1">//gets bio book info using getters for edition and book info</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"----------------------"</span><span class="p">);</span>
 
@@ -210,6 +212,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2019 sub for 2015: "</span> <span class="o">+</span> <span class="n">bio2019</span><span class="p">.</span><span class="na">canSubstituteFor</span><span class="p">(</span><span class="n">bio2015</span><span class="p">));</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2015 sub for 2019: "</span> <span class="o">+</span> <span class="n">bio2015</span><span class="p">.</span><span class="na">canSubstituteFor</span><span class="p">(</span><span class="n">bio2019</span><span class="p">));</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2015 sub for math: "</span> <span class="o">+</span> <span class="n">bio2015</span><span class="p">.</span><span class="na">canSubstituteFor</span><span class="p">(</span><span class="n">math</span><span class="p">));</span>
+        <span class="c1">//uses can substitute method to check if valid substitution</span>
 
     <span class="p">}</span>    
 <span class="p">}</span>

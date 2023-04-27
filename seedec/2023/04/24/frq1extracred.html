@@ -214,6 +214,7 @@ window.onload = wrap_img;
         <span class="n">FrogSimulation</span> <span class="n">phrog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrogSimulation</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
         <span class="n">FrogSimulation</span> <span class="n">phrog2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrogSimulation</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
         <span class="n">FrogSimulation</span> <span class="n">phrog3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrogSimulation</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+        <span class="c1">//creates 3 new frogs to test different situations </span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Part A:"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Running simulation:"</span><span class="p">);</span>
@@ -221,6 +222,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">phrog</span><span class="p">.</span><span class="na">simulate</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">phrog2</span><span class="p">.</span><span class="na">simulate</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">phrog3</span><span class="p">.</span><span class="na">simulate</span><span class="p">());</span>
+        <span class="c1">//simulates hopping for frogs</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"---------------------"</span><span class="p">);</span>
 
@@ -232,7 +234,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">phrog2</span><span class="p">.</span><span class="na">runSimulations</span><span class="p">(</span><span class="mi">400</span><span class="p">));</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">phrog3</span><span class="p">.</span><span class="na">runSimulations</span><span class="p">(</span><span class="mi">400</span><span class="p">));</span>
-        
+        <span class="c1">//returns the ratio of successful simulations</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">FrogSimulationTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
